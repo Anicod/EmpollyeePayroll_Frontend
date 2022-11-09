@@ -13,7 +13,7 @@
 .nobor{
     border-style: hidden;
     width: 90%;
-    height: 80px;
+    height: 70px;
     opacity: 1;
     border-color: aliceblue;
     border-collapse: collapse;
@@ -34,7 +34,7 @@ img{
 .opecbor{
     border-style: hidden;
     width: 100%;
-    height: 500px;
+    height: 550px;
     opacity: 0.8;
     display: flex;
     margin-right: 30px;
@@ -46,7 +46,7 @@ img{
     margin-left: 10px;
     background-color: white;
     margin-top: 7px;
-    height: 450px;
+    height: 520px;
     margin-left: 350px;
     border-top: 50px;
     border-radius: 8px;
@@ -80,4 +80,41 @@ label{
 .depcl{
     margin-left: -25px;
 
+}
+.salaryselect{
+    margin-left: 80px;
+    margin-top: 12px;
+    border-radius: 3px;
+    opacity: 1;
+    width: 341px;
+    height: 50px;
+    top: 585px;
+
+}
+#inputnotes{
+    padding: 15px
+}
+#submitbtn{
+    margin-left: 300px;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+#resetbtn{
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+#canclebtn{
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+.err-output{
+    margin-left: 50%;
+    font-size: 15px;
+    font-style: italic;
+    color: red;
 }
