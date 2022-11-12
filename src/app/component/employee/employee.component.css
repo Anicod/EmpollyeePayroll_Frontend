@@ -51,7 +51,7 @@ button{
     font-size: 25px;
     font-weight: bold;
     margin-right: 50px;
-    width: 200px;
+    width: 150px;
 }
 .material-symbols-outlined{
     color: black;
@@ -61,18 +61,25 @@ button{
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
     margin-left: -100px;
-    background-color: blue;
-    margin-top: 100px;
-    height: 40px;
-    color: white;
+    margin-top: 80px;
+    height: 30px;
+    color: black;
     border-radius: 5px;
   }
   .tabbor{
     border-style: hidden;
-    width: 100px;
+    width: 90px;
     height: 100px;
     opacity: 1;
     background-color: white;
+  }
+  th {
+    padding: 8px;
+    background-color: blueviolet;
+  }
+  tr{
+    border: 1px solid rgba(0, 0, 0, 0.108);
+    padding: 8px;
   }

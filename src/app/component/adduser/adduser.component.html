@@ -1,127 +1,107 @@
-<div class="mainbor">
-    <div class="nobor">
-        <div>
-            <img src="../../../assets/emp1.jpg" alt="">
+<div class="form-content">
+    <form class="form">
+        <div class="form-head">Employee Payroll Form</div>
+        <div class="row-content">
+            <label for="firstName" class="label text">First Name</label>
+           
+            <input type="text" name="firstName" id="firstName"  class="input required" [(ngModel)]="employee.firstName"><br/>
         </div>
-        <div>
-            <span>Employee</span><br>
-            <span>Payroll</span>
-        </div>
-    </div>
-    <div class="opecbor">
-        <div class="empform">
-            <h2>Employee Payroll Form</h2>
-            <h3>Name<input type="text" [(ngModel)]="userName" (input)="onInput($event)"></h3>
-            <span class="err-output">{{this.nameErr}}</span>
-            <h3>Profile Image</h3>
-            <div class="genderrad">
-                <div>
-                    <h3>Gender</h3>
-                </div>
-                <div>
-                    <input type="radio">
-                    <label for="child">Male</label>
-                    <input type="radio">
-                    <label for="child">Female</label>
-                </div>
+        <div class="row-content">
+            <label for="lastName" class="label text">last Name</label>
+            
+            <input type="text" name="lastName" id="lastName" class="input required" [(ngModel)]="employee.lastName"><br />
+        
             </div>
-            <div class="genderrad">
-                <div>
-                    <h3>Department</h3>
-                </div>
-                <div class="depcl">
-                    <input type="checkbox" id="child" name="age" value="child">
-                    <label for="child">HR</label>
-                    <input type="checkbox" id="child" name="age" value="child">
-                    <label for="child">Sales</label>
-                    <input type="checkbox" id="child" name="age" value="child">
-                    <label for="child">IT</label>
-                </div>
+            <div class="row-content">
+                <label for="lastName" class="label text">adress</label>
+                <input type="text" name="address" id="address" class="input required" [(ngModel)]="employee.address"><br />
             </div>
-            <div class="genderrad">
-                <div>
-                    <h3>Salary</h3>
-                </div>
-                <div class="salaryselect">
-                    <select style="width: 200px; height:30px;">
-                        <option value="0">Select Salary</option>
-                        <option value="1">3 Lakh</option>
-                        <option value="2">Above 3 Lakh</option>
-                        <option value="3">Beloe 3 Lakh</option>
-                    </select>
-                </div>
-            </div>
-            <div class="genderrad">
-                <div>
-                    <h3>Start Date</h3>
-                </div>
-                <div class="salaryselect">
-                    <select style="width: 100px; height:30px;">
-                        <option>Day</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
-                    </select>
-                </div>
-                <div class="salaryselect">
-                    <select style="width: 100px; height:30px;">
-                        <option>Month</option>
-                        <option value="0">January</option>
-                        <option value="1">Februar</option>
-                        <option value="2">March</option>
-                        <option value="3">April</option>
-                    </select>
-                </div>
-                <div class="salaryselect">
-                    <select style="width: 100px; height:30px;">
-                        <option>Year</option>
-                        <option value="0">2018</option>
-                        <option value="1">2019</option>
-                        <option value="2">2020</option>
-                        <option value="3">2021</option>
-                    </select>
-                </div>
-            </div>
-            <h3>Notes<input type="text" id="inputnotes"></h3>
-            <div class="genderrad">
-                <div>
-                    <button id="canclebtn">Cancle</button>
-                </div>
-                <div>
-                    <button id="submitbtn">Submit</button>
-                </div>
-                <div>
-                    <button id="resetbtn">Reset</button>
-                </div>
+
+        <div class="row-content">
+            <label class="label text" for="profile">Profile Image</label>
+            <div class="profile-radio-content">
+                <label>
+                   
+                    <input type="radio" id="profile2" name="profile" value="../../../assets/men1.png"
+                        [(ngModel)]="employee.profilePic" required>
+                    <img class="profile" id="image1" src="../../../assets/men1.png">
+                </label>
+                <label>
+                    <input type="radio" id="profile2" name="profile" value="../../../assets/men2.png"
+                        [(ngModel)]="employee.profilePic" required>
+                    <img class="profile" id="image2" src="../../../assets/men2.png">
+                </label>
+                <label>
+                    <input type="radio" id="profile3" name="profile" value="../../../assets/fm.png"
+                        [(ngModel)]="employee.profilePic" required>
+                    <img class="profile" id="image3" src="../../../assets/fm.png">
+                </label>
+                <label>
+                    <input type="radio" id="profile4" name="profile" value="../../../assets/men3.png"
+                        [(ngModel)]="employee.profilePic" required>
+                    <img class="profile" id="image4" src="../../../assets/men3.png">
+                </label>
             </div>
         </div>
-    </div>
+
+        <div class="row-content">
+            <label class="label text" for="gender">Gender</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="Male" [(ngModel)]="employee.gender" required  >
+                <label class="text" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" [(ngModel)]="employee.gender" required>
+                <label class="text" for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="row-content">
+            <label class="label text" for="department">Department</label>
+            <div>
+              
+                <input type="checkbox" class="checkbox" id="hr" (click)="getVal('HR')"
+                    [ngModel]="employee.department=='HR'" name="department1" value="HR">
+                <label for="hr">HR</label>
+
+                <input type="checkbox" class="checkbox" id="sales" (click)="getVal('Sales')"
+                    [ngModel]="employee.department=='Sales'" name="department2" value="Sales">
+                <label for="sales">Sales</label>
+                <input type="checkbox" class="checkbox" id="finance" (click)="getVal('Finance')"
+                    [ngModel]="employee.department=='Finance'" name="department3" value="Finance">
+                <label for="finance">Finance</label>
+                <input type="checkbox" class="checkbox" id="engineer" (click)="getVal('Engineer')"
+                    [ngModel]="employee.department=='Engineer'" name="department4" value="Engineer">
+                <label for="engineer">Engineer</label>
+                <input type="checkbox" class="checkbox" id="others" (click)="getVal('Others')"
+                    [ngModel]="employee.department=='Others'" name="department5" value="Others">
+                <label for="others">Others</label>
+            </div>
+        </div>
+
+        <div class="row-content">
+            <label class="label text" for="salary">Choose Your Salary: </label>
+            <input class="input required" type="range" name="salary" id="salary" min="300000" max="800000" step="100"
+                value="400000" [(ngModel)]="employee.salary">
+            <output class="salary-output text" for="salary">800000</output>
+        </div>
+
+        <div class="row-content">
+            <label class="label text" for="StartDate">Start Date</label>
+            <input type="date" class="startDate" id="StartDate" name="date" [(ngModel)]="employee.date" required>
+        </div>
+
+        <div class="row-content">
+            <label class="label text" for="notes">Notes</label>
+            <textarea id="notes" class="input required" name="Notes" placeholder="Tell Something About Yourself."
+                style="height:100px" [(ngModel)]="employee.note"></textarea>
+        </div>
+
+        <div class="buttonParent">
+            <button class="resetButton button cancelButton">Cancel</button>
+            <div class="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton" (click)="addEmployeeData()">Submit</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
+        </div>
+
+    </form>
 </div>

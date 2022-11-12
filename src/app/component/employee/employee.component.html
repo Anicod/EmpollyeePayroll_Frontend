@@ -14,12 +14,23 @@
 
         </div>
         <table>
+            <th>Profile</th>
             <th>Name</th>
             <th>gender</th>
             <th>Department</th>
             <th>Salary</th>
             <th>Start Date</th>
             <th>Action</th>
+            <tr *ngFor = "let employ of allEmployee">
+                <td><img [src]="employ.profilePic" alt=""></td>
+                <td>{{employ.firstName}}</td>
+                <td>{{employ.gender}}</td>
+                <td>{{employ.department}}</td>
+                <td>{{employ.salary}}</td>
+                <td>{{employ.date}}</td>
+                <td><span class="material-symbols-outlined" (click)="fun()">delete</span></td>
+                <td><span class="material-symbols-outlined">edit</span></td>
+            </tr>
         </table>
         <div>
             <button routerLink="/adduser">+ Add User</button>

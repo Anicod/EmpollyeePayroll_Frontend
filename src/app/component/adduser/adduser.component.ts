@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeModel } from 'src/app/employeeModel';
+import { EmpserviceService } from 'src/app/service/empservice.service';
 
 @Component({
   selector: 'app-adduser',
@@ -6,20 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adduser.component.css']
 })
 export class AdduserComponent implements OnInit {
+  employee: EmployeeModel = new EmployeeModel("",new Date,"", "","","", 0, "","");
   userName = ""
   nameErr = ""
-  constructor() { }
-
+  constructor(private servLayer:EmpserviceService, private router: Router) { }
   ngOnInit(): void {
   }
-  onInput($event:any){
-    console.log("hello", $event.data)
-    const nameRegx = RegExp('[A-Z]{1}[a-zA-Z\\s]{2,}$')
-    if(nameRegx.test(this.userName)){
-      this.nameErr = ""
-      return;
-    }
-      this.nameErr = "name is not valid"
+  getVal(value: String) {
+    console.log(value);
+    this.employee.department = value.toString();
   }
-
+  addEmployeeData() {
+    console.log(this.employee);
+    this.servLayer.insertEmployee(this.employee).subscribe((data:any) => {
+      this.router.navigate(["/"])
+    })
+  }
 }
