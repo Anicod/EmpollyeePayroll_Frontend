@@ -28,8 +28,8 @@
                 <td>{{employ.department}}</td>
                 <td>{{employ.salary}}</td>
                 <td>{{employ.date}}</td>
-                <td><span class="material-symbols-outlined" (click)="fun()">delete</span></td>
-                <td><span class="material-symbols-outlined">edit</span></td>
+                <td><span class="material-symbols-outlined" (click)="deleteEmp(employ.Id)">delete</span></td>
+                <td><span class="material-symbols-outlined" (click)="edit(employ.Id)">edit</span></td>
             </tr>
         </table>
         <div>

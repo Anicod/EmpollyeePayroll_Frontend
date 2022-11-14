@@ -77,7 +77,10 @@ table {
   }
   th {
     padding: 8px;
-    background-color: blueviolet;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 20px;
   }
   tr{
     border: 1px solid rgba(0, 0, 0, 0.108);

@@ -28,7 +28,13 @@ export class EmpserviceService {
     return this.http.post("http://localhost:8080/request/postbydto", employee);
   }
   deleteEmp(Id:number): Observable<any>{
-    return this.http.delete("http://localhost:8080/request/deletebyidPath/"+Id)
+    return this.http.delete("http://localhost:8080/request/deletebyidPath/"+Id);
+  }
+  updateEmp(Id:number, employee:any){
+    return this.http.put("http://localhost:8080/request/updatebydto/"+Id, employee);
+  }
+  getEmpById(Id:number){
+    return this.http.get("http://localhost:8080/request/getbyiddtoPath/"+Id);
   }
 
   }

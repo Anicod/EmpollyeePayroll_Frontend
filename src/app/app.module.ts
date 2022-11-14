@@ -7,12 +7,14 @@ import { EmployeeComponent } from './component/employee/employee.component';
 import { AdduserComponent } from './component/adduser/adduser.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateComponent } from './component/update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    AdduserComponent
+    AdduserComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
